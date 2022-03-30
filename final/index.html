@@ -128,7 +128,8 @@
                     </div>
                 </div>
             </div>
-            <a href="./index.html" onclick="alert('Форма добавления учебного года');return false;"
+            <a href=""
+               id="open_form_add_year"
                class="button w-button">Добавить учебный год</a></div>
 
     </div>
@@ -192,6 +193,83 @@
             </div>
         </div>
     </div>
+
+
+    <div id="add-year" style="opacity: 1;transition: opacity 300ms ease 0s;display: none;"
+         class="window_popup w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">
+        <div class="w-commerce-commercecartcontainer cart-container" style="transform: none;">
+            <div class="w-commerce-commercecartheader cart-header">
+                <h4 class="w-commerce-commercecartheading">
+                    Добавить учебный год
+                </h4>
+                <a href="#"
+                   class="window_popup-close w-commerce-commercecartcloselink w-inline-block">
+                    <svg width="16px" height="16px" viewBox="0 0 16 16">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g fill-rule="nonzero" fill="#333333">
+                                <polygon
+                                        points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="w-commerce-commercecartformwrapper">
+                <form>
+                    <div class="w-commerce-commercecartfooter cart-footer">
+                        <label for="form_add_year_years" class="label">Учебный год</label>
+                        <input type="text"
+                               class="input w-input"
+                               maxlength="256"
+                               name="Contact-Name"
+                               id="form_add_year_years">
+                        <label for="form_add_year_place" class="label">Населенный пункт (типа ОКАТО)</label>
+                        <input type="text"
+                               class="input w-input"
+                               maxlength="256"
+                               name="Contact-Name"
+                               id="form_add_year_place">
+                        <label for="form_add_year_building" class="label">Школа/детский сад (названием)</label>
+                        <input type="text"
+                               class="input w-input"
+                               maxlength="256"
+                               name="Contact-Name"
+                               id="form_add_year_building">
+                        <label for="form_add_year_class" class="label">Класс/группа (названием)</label>
+                        <input type="text"
+                               class="input w-input"
+                               maxlength="256"
+                               name="Contact-Name"
+                               id="form_add_year_class">
+                        <label for="form_add_year_fio_mentor" class="label">ФИО классного руководителя/воспитателя</label>
+                        <input type="text"
+                               class="input w-input"
+                               maxlength="256"
+                               name="Contact-Name"
+                               id="form_add_year_fio_mentor">
+                        <label for="form_add_year_phone_mentor" class="label">Контактный телефон классного руководителя/воспитателя</label>
+                        <input type="text"
+                               class="input w-input"
+                               maxlength="256"
+                               name="Contact-Name"
+                               id="form_add_year_phone_mentor">
+                        <label for="form_add_year_photo" class="label">Групповая фотография</label>
+                        <input type="file"
+                               name="Contact-Name"
+                               id="form_add_year_photo">
+
+                        <div class="submit" style="margin-top: 30px">
+                            <button type="submit"
+                                    class="w-commerce-commercecartcheckoutbutton button">
+                                Добавить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </div>
 <script src="../assets/js/jquery-3.5.1.min.js" type="text/javascript" crossorigin="anonymous"></script>
 <script src="../assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>

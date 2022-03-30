@@ -104,3 +104,11 @@
 .slick-dots li.slick-active button:before {
     color: #a5c926;
 }
+.w-commerce-commercecartcontainerwrapper {
+    z-index: 100;
+}
+
+.w-commerce-commercecartformwrapper .submit {
+    display: flex;
+    justify-content: center;
+}
