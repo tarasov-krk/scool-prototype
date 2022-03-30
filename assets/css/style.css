@@ -112,3 +112,55 @@
     display: flex;
     justify-content: center;
 }
+
+.photo-hover-layout {
+    position: relative;
+}
+.photo-hover-layout__item {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.photo-hover-layout__item:hover {
+    border: 1px dashed #ffffff;
+}
+#popup-photo .pupup-full_name {
+    width: 100%;
+    text-align: center;
+}
+#popup-photo .pupup-desc {
+    padding: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+#popup-photo .pupup-photo-wrap {
+    background-color: #cacaca;
+    display: flex;
+}
+#popup-photo .pupup-photo {
+    height: 500px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#people_name {
+    position: absolute;
+    background: #000000;
+    color: #ffffff;
+    padding: 3px 10px;
+    margin-top: -60px;
+    margin-left: calc(-50%);
+    width: max-content;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
