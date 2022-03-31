@@ -38,7 +38,10 @@
     justify-content: flex-start;
 }
 
-.instagram-link .portfolio-info {
+.hovered-block {
+    position: relative;
+}
+.hovered-block .hovered-block-plank {
     opacity: 0;
     position: absolute;
     left: 30px;
@@ -50,17 +53,17 @@
     padding: 15px;
 }
 
-.instagram-link:hover .portfolio-info {
+.hovered-block:hover .hovered-block-plank {
     opacity: 1;
     bottom: 20px;
 }
 
-.instagram-link .portfolio-info h4,
-.instagram-link .portfolio-info p {
+.hovered-block .hovered-block-plank h4,
+.hovered-block .hovered-block-plank p {
     margin-bottom: 5px;
 }
 
-.instagram-link:hover {
+.hovered-block:hover {
     transform: none;
 }
 
@@ -115,6 +118,7 @@
 
 .photo-hover-layout {
     position: relative;
+    margin-top: -65px;
 }
 .photo-hover-layout__item {
     position: absolute;
@@ -163,4 +167,14 @@
 
 .hidden {
     display: none;
+}
+
+.p-0 {
+    padding: 0;
+}
+.p-30 {
+    padding: 30px;
+}
+.mt-0 {
+    margin-top: 0;
 }

@@ -20,11 +20,7 @@ $(document).ready(() => {
     e.preventDefault()
     $('#add-event').show()
   })
-  $('.photo-hover-layout__item').mouseenter(function () {
-    $(this).append('<div id=\'people_name\'>' + $(this).data('name') + '</div>')
-  }).mouseleave(function () {
-    $('#people_name').remove()
-  }).click(function () {
+  $('.photo-hover-layout__item').click(function () {
     let name = $(this).data('name')
     let img = $(this).data('img')
     let desc = $(this).data('desc')
