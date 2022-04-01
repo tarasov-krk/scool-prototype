@@ -1,0 +1,40 @@
+let sw = new Swiper('.swiper-container', {
+  autoplay: {
+    delay: 5000,
+  },
+  init: false,
+  loop: true,
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 1,
+  centeredSlides: true,
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 60,
+    stretch: 0,
+    depth: 60,
+    modifier: 1,
+    slideShadows: true,
+  },
+  grabCursor: true,
+  parallax: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    767: {
+      slidesPerView: 2,
+      spaceBetween: -80,
+    },
+  },
+})
+sw.init()

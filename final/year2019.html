@@ -12,6 +12,9 @@
             type="text/javascript"></script>
     <![endif]-->
 
+    <link href="../assets/css/lightgallery.min.css" rel="stylesheet">
+    <link href="../assets/css/gallery-page.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/slick-theme.css">
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
@@ -61,7 +64,7 @@
             <div class="photo-hover-layout">
                 <img src="../assets/img/2018-2019/groups/group.jpg"
                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, 93vw" alt=""
-                     class="about-image">
+                     class="about-image group-photo">
                 <div class="photo-hover-layout__item"
                      style="top: 95px;left: 177px;"
                      data-name="Пахомов Даниил"
@@ -213,7 +216,7 @@
                  class="instagram"
                  style="margin-bottom: 13px;opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
 
-                <a href=""
+                <a href="./event8.html"
                    style="background-image: url('../assets/img/2018-2019/В классе (Вот такие второклашки)/8200.jpg');background-size: cover;background-position: center; height: 310px;"
                    class="instagram-link w-inline-block hovered-block"
                 >
@@ -222,7 +225,7 @@
                         <p>Вот такие второклашки</p>
                     </div>
                 </a>
-                <a href=""
+                <a href="./event9.html"
                    style="background-image: url('../assets/img/2018-2019/Поход на столбы (Вместе берем высоты)/IMG-20171026-WA0016.jpg');background-size: cover;background-position: center; height: 310px;"
                    class="instagram-link w-inline-block hovered-block"
                 >
@@ -231,7 +234,7 @@
                         <p>Вместе берем высоты</p>
                     </div>
                 </a>
-                <a href=""
+                <a href="./event10.html"
                    style="background-image: url('../assets/img/2018-2019/Поход на биатлонку (Быстрее, выше , умнее)/IMG-20160911-WA0007.jpg');background-size: cover;background-position: center; height: 310px;"
                    class="instagram-link w-inline-block hovered-block"
                 >
@@ -350,5 +353,23 @@
 <script src="../assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../assets/js/template.js" type="text/javascript"></script>
 <script src="../assets/js/script.js" type="text/javascript"></script>
+
+<script src="../assets/js/litegallery/lightgallery.min.js"></script>
+<script src="../assets/js/litegallery/lg-thumbnail.min.js"></script>
+<script src="../assets/js/litegallery/lg-zoom.min.js"></script>
+<script src="../assets/js/litegallery/lg-hash.min.js"></script>
+<script src="../assets/js/litegallery/lg-pager.min.js"></script>
+<script src="../assets/js/litegallery/lg-fullscreen.min.js"></script>
+
+<script>
+  $('.group-photo').on('dblclick', function(e) {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        src: '../assets/img/2018-2019/groups/group.jpg',
+      }]
+    });
+  });
+</script>
 </body>
 </html>
