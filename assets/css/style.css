@@ -131,9 +131,6 @@
     cursor: pointer;
 }
 
-.photo-hover-layout__item:hover {
-    border: 1px dashed #ffffff;
-}
 #popup-photo .pupup-full_name {
     width: 100%;
     text-align: center;
