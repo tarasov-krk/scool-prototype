@@ -145,10 +145,14 @@
     display: flex;
 }
 #popup-photo .pupup-photo {
-    height: 500px;
+    height: 55vh;
     width: auto;
     max-width: 100%;
     margin: 0 auto;
+}
+
+#popup-photo .w-commerce-commercecartcontainer {
+    max-width: 50vh;
 }
 
 #people_name {
