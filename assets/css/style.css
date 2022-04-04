@@ -157,13 +157,19 @@
 
 #people_name {
     position: absolute;
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     padding: 3px 10px;
     margin-top: -60px;
     margin-left: calc(-50%);
     width: max-content;
     border-radius: 20px;
+}
+.instagram {
+    justify-content: center;
+}
+.instagram .instagram-link {
+    max-width: 379px;
 }
 
 .hidden {
@@ -178,4 +184,24 @@
 }
 .mt-0 {
     margin-top: 0;
+}
+.lg-backdrop {
+    background-color: #fff;
+}
+.lg-actions .lg-next, .lg-actions .lg-prev  {
+    background: transparent;
+}
+.lg-outer .lg-toogle-thumb:hover,
+.lg-toolbar .lg-icon:hover,
+.lg-actions .lg-next:hover, .lg-actions .lg-prev:hover {
+    color: #000000;
+}
+.lg-toolbar {
+    background-color: transparent;
+}
+.lg-outer .lg-thumb-outer {
+    background-color: #ffffff;
+}
+.lg-outer .lg-toogle-thumb {
+    background: transparent;
 }

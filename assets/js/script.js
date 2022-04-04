@@ -10,6 +10,10 @@ $(document).ready(() => {
     e.preventDefault()
     $('#add-event').show()
   })
+  $('#open_form_add_photo').click(function (e) {
+    e.preventDefault()
+    $('#add-photo').show()
+  })
   $('.photo-hover-layout__item').mouseenter(function () {
     $(this).append('<div id=\'people_name\'>' + $(this).data('name') + '</div>')
   }).mouseleave(function () {
@@ -29,4 +33,18 @@ $(document).ready(() => {
     window.find('.pupup-desc').text(desc)
     window.show()
   })
+  let demoMessage= "В демо версии функция отключена";
+  $('form').submit((e)=> {
+    e.preventDefault();
+    alert(demoMessage);
+    $('.window_popup').hide()
+  });
+  $(".nav-main .navigation nav a:not(:first-child)").click((e)=> {
+    e.preventDefault();
+    alert(demoMessage);
+  });
+  $(".footer-nav a:not(:first-child)").click((e)=> {
+    e.preventDefault();
+    alert(demoMessage);
+  });
 })
