@@ -205,3 +205,16 @@
 .lg-outer .lg-toogle-thumb {
     background: transparent;
 }
+#search {
+    width: 100%;
+    position: relative;
+}
+#search button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#search input {
+    border-color: #a5c926;
+    background-color: #fff;
+}

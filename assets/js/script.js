@@ -34,7 +34,7 @@ $(document).ready(() => {
     window.show()
   })
   let demoMessage= "В демо версии функция отключена";
-  $('form').submit((e)=> {
+  $('form:not(#search)').submit((e)=> {
     e.preventDefault();
     alert(demoMessage);
     $('.window_popup').hide()
@@ -46,5 +46,9 @@ $(document).ready(() => {
   $(".footer-nav a:not(:first-child)").click((e)=> {
     e.preventDefault();
     alert(demoMessage);
+  });
+  $('form#search').submit((e)=> {
+    e.preventDefault();
+    alert("В демо версии поиск отключен");
   });
 })

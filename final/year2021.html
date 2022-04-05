@@ -26,7 +26,7 @@
         <div class="nav-main">
             <div class="wrapper nav-bar-wrapper">
                 <a href="./index.html" class="brand w-nav-brand" aria-label="home">
-                   Баширова Мария
+                    Баширова Мария
                 </a>
                 <a href="" class="brand w-nav-brand p-0">/ 4 «В»</a>
                 <div class="navigation">
@@ -50,12 +50,15 @@
 
     <div class="section no-padding-vertical wf-section" style="padding-top: 50px; padding-bottom: 30px">
         <div class="wrapper side-paddings">
-            <input type="text"
-                   class="input w-input"
-                   maxlength="256"
-                   name=""
-                   placeholder="Поиск..."
-            >
+            <form id="search" action="">
+                <input type="text"
+                       class="input w-input"
+                       maxlength="256"
+                       name=""
+                       placeholder="Поиск..."
+                >
+                <button type="submit" class="button">Найти</button>
+            </form>
         </div>
     </div>
 
@@ -326,14 +329,15 @@
 <script src="../assets/js/litegallery/lg-fullscreen.min.js"></script>
 
 <script>
-  $('.group-photo').on('dblclick', function(e) {
+  $('.group-photo').on('dblclick', function (e) {
     $(this).lightGallery({
       dynamic: true,
-      dynamicEl: [{
-        src: '../assets/img/2020-2021/groups/group.jpg',
-      }]
-    });
-  });
+      dynamicEl: [
+        {
+          src: '../assets/img/2020-2021/groups/group.jpg',
+        }],
+    })
+  })
 </script>
 
 </body>
