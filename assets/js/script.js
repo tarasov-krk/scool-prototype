@@ -33,22 +33,49 @@ $(document).ready(() => {
     window.find('.pupup-desc').text(desc)
     window.show()
   })
-  let demoMessage= "В демо версии функция отключена";
-  $('form:not(#search)').submit((e)=> {
-    e.preventDefault();
-    alert(demoMessage);
+  let demoMessage = 'В демо версии функция отключена'
+  $('form:not(#search)').submit((e) => {
+    e.preventDefault()
+    showDemoModal(demoMessage)
     $('.window_popup').hide()
-  });
-  $(".nav-main .navigation nav a:not(:first-child)").click((e)=> {
-    e.preventDefault();
-    alert(demoMessage);
-  });
-  $(".footer-nav a:not(:first-child)").click((e)=> {
-    e.preventDefault();
-    alert(demoMessage);
-  });
-  $('form#search').submit((e)=> {
-    e.preventDefault();
-    alert("В демо версии поиск отключен");
-  });
+  })
+  $('.nav-main .navigation nav a:not(:first-child)').click((e) => {
+    e.preventDefault()
+    showDemoModal(demoMessage)
+  })
+  $('.footer-nav a:not(:first-child)').click((e) => {
+    e.preventDefault()
+    showDemoModal(demoMessage)
+  })
+  $('form#search').submit((e) => {
+    e.preventDefault()
+    showDemoModal('В демо версии поиск отключен')
+  })
+  $('body').on('click', '#demo-modal .demo-modal-close', ()=>{
+    $('#demo-modal').remove()
+  })
+
+  function showDemoModal (text) {
+    const demoModal = '<div id="demo-modal" style="opacity: 1;transition: opacity 300ms ease 0s;"\n' +
+      '         class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">\n' +
+      '        <div class="w-commerce-commercecartcontainer cart-container" style="transform: none;">\n' +
+      '            <div class="w-commerce-commercecartheader cart-header">\n' +
+      '                <h5 class="w-commerce-commercecartheading">\n' + text + '</h5>\n' +
+      '                <a href="#"\n' +
+      '                   class="demo-modal-close w-commerce-commercecartcloselink w-inline-block">\n' +
+      '                    <svg width="16px" height="16px" viewBox="0 0 16 16">\n' +
+      '                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
+      '                            <g fill-rule="nonzero" fill="#333333">\n' +
+      '                                <polygon\n' +
+      '                                        points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>\n' +
+      '                            </g>\n' +
+      '                        </g>\n' +
+      '                    </svg>\n' +
+      '                </a>\n' +
+      '            </div>\n' +
+      '        </div>\n' +
+      '    </div>'
+
+    $('body').append(demoModal)
+  }
 })

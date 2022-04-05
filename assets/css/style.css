@@ -218,3 +218,16 @@
     border-color: #a5c926;
     background-color: #fff;
 }
+.white-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+.fs-14 {
+    font-size: 14px;
+}
+
+#demo-modal.w-commerce-commercecartcontainerwrapper {
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 54px;
+}

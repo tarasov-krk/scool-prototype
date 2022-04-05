@@ -1,0 +1,58 @@
+.custom-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*html body {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*    font-family: 'Quicksand', sans-serif;*/
+/*    overflow-x: hidden;*/
+/*    position: relative;*/
+/*    top: -2.5rem;*/
+/*}*/
+
+.custom-slider .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.custom-slider .container .ui-card {
+    height: 20rem;
+    width: 12rem;
+    position: relative;
+    z-index: 1;
+    transform: scale(0.6) translateY(-2rem);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 1s;
+    /*display: none;*/
+}
+.custom-slider .container .ui-card.active {
+    z-index: 3;
+    transform: scale(1) translateY(0) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
+    /*display: initial;*/
+}
+
+.custom-slider .container .ui-card.prev,
+.custom-slider .container .ui-card.next {
+    z-index: 2;
+    transform: scale(0.8) translateY(-1rem) translateX(0);
+    opacity: 0.6;
+    pointer-events: auto;
+    transition: 1s;
+    /*display: initial;*/
+}
+.custom-slider .container .ui-card img {
+    width: 100%;
+}
