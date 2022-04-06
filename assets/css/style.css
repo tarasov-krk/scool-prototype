@@ -231,3 +231,26 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding-top: 54px;
 }
+
+.nav-top .nav-top-text span {
+    font-weight: 600;
+}
+.nav-top .nav-top-text a,
+.nav-top .nav-top-social .nav-top-info {
+    padding: 4px 15px;
+    background: #fff;
+    color: #a5c926;
+    border-radius: 24px;
+}
+.nav-top .nav-top-social .nav-top-info {
+    margin-left: 10px;
+}
+
+.custom-slider .product-card-price{
+    width: 70px;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: bold;
+}
