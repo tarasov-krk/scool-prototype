@@ -21,7 +21,7 @@
 .product-card-image-wrapper {
     height: 347px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -253,4 +253,11 @@
     text-align: center;
     margin-top: 12px;
     font-weight: bold;
+}
+#year-block .product-card-image-wrapper {
+    border-radius: 16px;
+}
+
+.nav-main .nav-bar-wrapper {
+    background: url("../../assets/img/demo.png") no-repeat center;
 }

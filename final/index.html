@@ -112,32 +112,32 @@
     <div class="section wf-section no-padding-vertical p-30">
         <div class="wrapper custom-slider">
             <div class="container" style="left: 484px;">
-                <div class="ui-card item-zero"><img src="../assets/img/profile/10%20ЛЕТ.jpg" data-index="4" alt="">
-                    <div class="product-card-price">10 лет</div>
-                </div>
-                <div class="ui-card item-first"><img src="../assets/img/profile/6%20ЛЕТ.jpg" data-index="0" alt="">
+                <div class="ui-card item-zero"><img src="../assets/img/profile/6%20ЛЕТ.jpg" data-index="0" alt="">
                     <div class="product-card-price">6 лет</div>
                 </div>
-                <div class="ui-card"><img src="../assets/img/profile/7%20ЛЕТ.jpg" data-index="1" alt="">
-                    <div class="product-card-price">7 лет</div>
-                </div>
-                <div class="ui-card"><img src="../assets/img/profile/8%20ЛЕТ.jpg" data-index="2" alt="">
-                    <div class="product-card-price">8 лет</div>
+                <div class="ui-card item-first"><img src="../assets/img/profile/10%20ЛЕТ.jpg" data-index="4" alt="">
+                    <div class="product-card-price">10 лет</div>
                 </div>
                 <div class="ui-card"><img src="../assets/img/profile/9%20ЛЕТ.jpg" data-index="3" alt="">
                     <div class="product-card-price">9 лет</div>
                 </div>
-                <div class="ui-card item-prelast"><img src="../assets/img/profile/10%20ЛЕТ.jpg" data-index="4" alt="">
-                    <div class="product-card-price">10 лет</div>
+                <div class="ui-card"><img src="../assets/img/profile/8%20ЛЕТ.jpg" data-index="2" alt="">
+                    <div class="product-card-price">8 лет</div>
                 </div>
-                <div class="ui-card item-last"><img src="../assets/img/profile/6%20ЛЕТ.jpg" data-index="0" alt="">
+                <div class="ui-card"><img src="../assets/img/profile/7%20ЛЕТ.jpg" data-index="1" alt="">
+                    <div class="product-card-price">7 лет</div>
+                </div>
+                <div class="ui-card item-prelast"><img src="../assets/img/profile/6%20ЛЕТ.jpg" data-index="0" alt="">
                     <div class="product-card-price">6 лет</div>
+                </div>
+                <div class="ui-card item-last"><img src="../assets/img/profile/10%20ЛЕТ.jpg" data-index="4" alt="">
+                    <div class="product-card-price">10 лет</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section wf-section" style="padding-top: 40px">
+    <div id="year-block" class="section wf-section" style="padding-top: 40px">
         <div class="wrapper">
             <div class="shop-header">
                 <h3 class="no-margin w-hidden-small w-hidden-tiny">Учебные года</h3>
@@ -289,36 +289,38 @@
 
 <script src="../assets/js/litegallery/lightgallery.min.js"></script>
 <script src="../assets/js/litegallery/lg-thumbnail.min.js"></script>
-<script src="../assets/js/litegallery/lg-hash.min.js"></script>
 <script src="../assets/js/litegallery/lg-pager.min.js"></script>
 <script src="../assets/js/litegallery/lg-fullscreen.min.js"></script>
 
 <script>
-  $('.custom-slider img').on('dblclick', function(e) {
+  $('.custom-slider img').on('dblclick', function (e) {
     const i = $(this).data('index')
     $(this).lightGallery({
       dynamic: true,
       showThumbByDefault: false,
       thumbWidth: 70,
       index: i,
-      dynamicEl: [{
-        src: '../assets/img/profile/6%20ЛЕТ.jpg',
-        thumb: '../assets/img/profile/6%20ЛЕТ.jpg',
-      },{
-        src: '../assets/img/profile/7%20ЛЕТ.jpg',
-        thumb: '../assets/img/profile/7%20ЛЕТ.jpg',
-      },{
-        src: '../assets/img/profile/8%20ЛЕТ.jpg',
-        thumb: '../assets/img/profile/8%20ЛЕТ.jpg',
-      },{
-        src: '../assets/img/profile/9%20ЛЕТ.jpg',
-        thumb: '../assets/img/profile/9%20ЛЕТ.jpg',
-      },{
-        src: '../assets/img/profile/10%20ЛЕТ.jpg',
-        thumb: '../assets/img/profile/10%20ЛЕТ.jpg',
-      }]
-    });
-  });
+      dynamicEl: [
+        {
+          src: '../assets/img/profile/10%20ЛЕТ.jpg',
+          thumb: '../assets/img/profile/10%20ЛЕТ.jpg',
+        }, {
+          src: '../assets/img/profile/9%20ЛЕТ.jpg',
+          thumb: '../assets/img/profile/9%20ЛЕТ.jpg',
+        }, {
+          src: '../assets/img/profile/8%20ЛЕТ.jpg',
+          thumb: '../assets/img/profile/8%20ЛЕТ.jpg',
+        }, {
+          src: '../assets/img/profile/7%20ЛЕТ.jpg',
+          thumb: '../assets/img/profile/7%20ЛЕТ.jpg',
+        },
+        {
+          src: '../assets/img/profile/6%20ЛЕТ.jpg',
+          thumb: '../assets/img/profile/6%20ЛЕТ.jpg',
+        },
+      ],
+    })
+  })
 </script>
 
 </body>
