@@ -271,6 +271,12 @@
     display: -ms-flexbox;
     display: flex;
 }
+.custom-slider .container {
+    left: 484px;
+}
+#year-block {
+    padding-top: 40px;
+}
 
 @media screen and (max-width: 991px) {
     .navigation {
@@ -278,6 +284,13 @@
     }
     .nav-top * {
         font-size: 11px;
+    }
+    .custom-slider .container .ui-card {
+        height: 23rem;
+        width: 14rem;
+    }
+    .custom-slider .container {
+        left: 447px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -317,5 +330,18 @@
     }
     .footer-link {
         font-size: 14px;
+    }
+    .custom-slider .container .ui-card {
+        height: 16rem;
+        width: 8rem;
+    }
+    .custom-slider .container {
+        left: 255px;
+    }
+    #year-block {
+        padding-top: 0;
+    }
+    .product-card-wrapper {
+        width: 100%;
     }
 }
