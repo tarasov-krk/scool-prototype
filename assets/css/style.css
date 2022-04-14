@@ -292,6 +292,36 @@
     .custom-slider .container {
         left: 447px;
     }
+    #group-photo h1 {
+        font-size: 18px;
+    }
+    .section {
+        padding-top: 8px;
+    }
+    #album .instagram {
+         display: block;
+     }
+    #album .instagram .instagram-link {
+        width: 46%;
+    }
+    #album .hovered-block .hovered-block-plank {
+        opacity: 1;
+        bottom: 10px;
+        padding: 5px 8px;
+    }
+    #album .hovered-block .hovered-block-plank h4 {
+        font-size: 16px;
+    }
+    #album .hovered-block .hovered-block-plank p {
+        font-size: 12px;
+    }
+    .gallery > ul > li {
+        width: 180px;
+        height: 140px;
+    }
+    .lg-actions {
+        display: none;
+    }
 }
 @media screen and (max-width: 767px) {
     .nav-top * {
@@ -343,5 +373,36 @@
     }
     .product-card-wrapper {
         width: 100%;
+    }
+    #group-photo h1 {
+        font-size: 12px;
+    }
+    #album .instagram {
+        display: block;
+    }
+    #album .instagram .instagram-link {
+        width: 100%;
+    }
+    #album .hovered-block .hovered-block-plank {
+        opacity: 1;
+        bottom: 10px;
+        padding: 5px 8px;
+    }
+    #album .hovered-block .hovered-block-plank h4 {
+        font-size: 16px;
+    }
+    #album .hovered-block .hovered-block-plank p {
+        font-size: 12px;
+    }
+    .gallery > ul > li {
+        width: 135px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 371px) {
+    .gallery > ul > li {
+        width: 260px;
+        height: 175px;
     }
 }
