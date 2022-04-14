@@ -304,4 +304,18 @@
     .nav-breadcrumbs {
         display: block;
     }
+    .footer {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+    .footer-copyright{
+        margin-left:0;
+    }
+    .footer-nav {
+        justify-content: center;
+    }
+    .footer-link {
+        font-size: 14px;
+    }
 }
