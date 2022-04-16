@@ -1,4 +1,7 @@
 $(document).ready(() => {
+  if (window.innerWidth <= 991) {
+    $('body').addClass('mobile')
+  }
   $('.window_popup-close').click(function () {
     $(this).closest('.window_popup').hide()
   })
@@ -14,11 +17,30 @@ $(document).ready(() => {
     e.preventDefault()
     $('#add-photo').show()
   })
-  $('.photo-hover-layout__item').mouseenter(function () {
+  $('body:not(.mobile) #group-photo .photo-hover-layout__item').mouseenter(function () {
     $(this).append('<div id=\'people_name\'>' + $(this).data('name') + '</div>')
   }).mouseleave(function () {
     $('#people_name').remove()
-  }).click(function () {
+  }).click(showPeopleInfo)
+
+  $('body.mobile #group-photo .photo-hover-layout__item').click(function () {
+    $('.people_name_mobile').hide().text($(this).data('name')).show()
+  }).dblclick(showPeopleInfo)
+
+  $('body.mobile').click(function (e) {
+    let isRemove = false
+    for (let i = 0; i < e.target.classList.length; i++) {
+      if (e.target.classList[i] != 'photo-hover-layout__item') {
+        isRemove = true
+      }
+    }
+
+    if (isRemove) {
+      $('.people_name_mobile').hide()
+    }
+  });
+
+  function showPeopleInfo() {
     let name = $(this).data('name')
     let img = $(this).data('img')
     let desc = $(this).data('desc')
@@ -32,7 +54,8 @@ $(document).ready(() => {
     }
     window.find('.pupup-desc').text(desc)
     window.show()
-  })
+  }
+
   let demoMessage = 'В демо версии функция отключена'
   $('form:not(#search)').submit((e) => {
     e.preventDefault()
@@ -51,7 +74,7 @@ $(document).ready(() => {
     e.preventDefault()
     showDemoModal('В демо версии поиск отключен')
   })
-  $('body').on('click', '#demo-modal .demo-modal-close', ()=>{
+  $('body').on('click', '#demo-modal .demo-modal-close', () => {
     $('#demo-modal').remove()
   })
 

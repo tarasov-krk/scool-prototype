@@ -126,9 +126,11 @@
     padding: 0;
     top: 0;
     left: 0;
-    width: 65px;
-    height: 65px;
+    width: 6%;
+    height: 9%;
     cursor: pointer;
+
+    border: 1px dashed #ffffff;
 }
 
 #popup-photo .pupup-full_name {
@@ -154,14 +156,28 @@
 #popup-photo .w-commerce-commercecartcontainer {
     max-width: 50vh;
 }
-
+.people_name_block {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -6%;
+    width: 100%;
+}
 #people_name {
     position: absolute;
     background: #ffffff;
     color: #000000;
     padding: 3px 10px;
+    width: max-content;
+    border-radius: 20px;
     margin-top: -60px;
     margin-left: calc(-50%);
+}
+.people_name_mobile {
+    display: none;
+    background: #ffffff;
+    color: #000000;
+    padding: 3px 10px;
     width: max-content;
     border-radius: 20px;
 }
@@ -276,6 +292,13 @@
 }
 #year-block {
     padding-top: 40px;
+}
+#group-photo .about-image {
+    margin: 0;
+    padding: 0;
+}
+#group-photo {
+    margin-top: 64px;
 }
 
 @media screen and (max-width: 991px) {

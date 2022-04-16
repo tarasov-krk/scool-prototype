@@ -123,107 +123,110 @@
                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, 93vw" alt=""
                      class="about-image group-photo">
                 <div class="photo-hover-layout__item"
-                     style="top: 388px;left: 83px;"
+                     style="top: 41%;left: 7%;"
                      data-name="Петрова Юлия"
                      data-img=""
                      data-desc="Пишет стихи"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 326px;left: 188px;"
+                     style="top: 34%;left: 16%;"
                      data-name="Макаров Виктор"
                      data-img=""
                      data-desc="Самый верный друг"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 344px;left: 263px;"
+                     style="top: 36%;left: 22%;"
                      data-name="Александров Кирилл"
                      data-img=""
                      data-desc="Всегда придёт на помощь"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 332px;left: 341px;"
+                     style="top: 35%;left: 29%;"
                      data-name="Тарасов Алексей"
                      data-img=""
                      data-desc="Самый харизматичный"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 323px;left: 603px;"
+                     style="top: 32%;left: 51%;"
                      data-name="Хомяков Лев"
                      data-img=""
                      data-desc="Компьютерный гений"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 338px;left: 704px;"
+                     style="top: 34%;left: 60%;"
                      data-name="Лавров Денис"
                      data-img=""
                      data-desc="Главный стиляга в классе"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 344px;left: 975px;"
+                     style="top: 35%;left: 83%;"
                      data-name="Ковалёв Герман"
                      data-img=""
                      data-desc="Будущий мэр Красноярска"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 389px;left: 203px;"
+                     style="top: 42%;left: 17%;"
                      data-name="Каримов Марат"
                      data-img=""
                      data-desc="1 место в школьной олимпиаде по физике"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 430px;left: 303px;"
+                     style="top: 46%;left: 26%;"
                      data-name="Самойлов Ярослав"
                      data-img=""
                      data-desc="Нет равных в знании математики"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 410px;left: 366px;"
+                     style="top: 45%;left: 31%;"
                      data-name="Яковлев Степан"
                      data-img=""
                      data-desc="Лучший танцор в классе"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 345px;left: 466px;"
+                     style="top: 36%;left: 40%;"
                      data-name="Гаврилина Виктория Владимировна"
                      data-img=""
                      data-desc="Классный руководитель"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 380px;left: 566px;"
+                     style="top: 40%;left: 48%;"
                      data-name="Земцова Дарья"
                      data-img=""
                      data-desc="Главный знаток анекдотов"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 388px;left: 648px;"
+                     style="top: 41%;left: 55%;"
                      data-name="Рябченко Мария"
                      data-img=""
                      data-desc="Самая весёлая и неугомонная"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 395px;left: 722px;"
+                     style="top: 42%;left: 61%;"
                      data-name="Маркевич Милана"
                      data-img=""
                      data-desc="Главная актриса в классе"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 411px;left: 808px;"
+                     style="top: 44%;left: 69%;"
                      data-name="Филипенко Екатерина"
                      data-img=""
                      data-desc="Лучше всех знает английский язык"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 383px;left: 900px;"
+                     style="top: 41%;left: 77%;"
                      data-name="Ефимова Елизавета"
                      data-img=""
                      data-desc="Главный в классе по грамматике"
                 ></div>
                 <div class="photo-hover-layout__item"
-                     style="top: 398px;left: 1013px;"
+                     style="top: 43%;left: 86%;"
                      data-name="Шевцов Степан"
                      data-img=""
                      data-desc='Главный фанат "Наруто"'
                 ></div>
+                <div class="people_name_block">
+                    <div class="people_name_mobile"></div>
+                </div>
             </div>
             <div class="p-30">
                 <h1>2020-2021, г. Красноярск, Гимназия №15, 4 «В»</h1>
@@ -383,13 +386,15 @@
 
 <script>
   $('.group-photo').on('dblclick', function (e) {
-    $(this).lightGallery({
-      dynamic: true,
-      dynamicEl: [
-        {
-          src: '../assets/img/2020-2021/groups/group.jpg',
-        }],
-    })
+    if(window.innerWidth >= 992) {
+      $(this).lightGallery({
+        dynamic: true,
+        dynamicEl: [
+          {
+            src: '../assets/img/2020-2021/groups/group.jpg',
+          }],
+      })
+    }
   })
 </script>
 
