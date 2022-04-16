@@ -291,12 +291,16 @@
 <script src="../assets/js/litegallery/lg-thumbnail.min.js"></script>
 <script src="../assets/js/litegallery/lg-pager.min.js"></script>
 <script src="../assets/js/litegallery/lg-fullscreen.min.js"></script>
+<script src="../assets/js/litegallery/lg-zoom.min.js"></script>
+<script src="../assets/js/litegallery/lg-hash.min.js"></script>
 
 <script>
   $('.custom-slider img').on('dblclick', function (e) {
     const i = $(this).data('index')
     $(this).lightGallery({
       dynamic: true,
+      zoom: isMobile(),
+      hash: isMobile(),
       showThumbByDefault: false,
       thumbWidth: 70,
       index: i,

@@ -1,7 +1,17 @@
+function isMobile() {
+  return window.innerWidth <= 991
+}
 $(document).ready(() => {
-  if (window.innerWidth <= 991) {
+  if (isMobile()) {
     $('body').addClass('mobile')
   }
+
+  $('#gallery').lightGallery({
+    showThumbByDefault: false,
+    zoom: isMobile(),
+    hash: isMobile(),
+  })
+
   $('.window_popup-close').click(function () {
     $(this).closest('.window_popup').hide()
   })
