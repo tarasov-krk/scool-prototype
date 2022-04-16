@@ -101,7 +101,7 @@ $(document).ready(() => {
       '        <div class="mm_block_wrap">\n' +
       '            <div class="mm_block">\n' +
       '                <a href="tel:+79913745577" class="mm_phone">P</a>\n' +
-      '                <a href="https://t.me/79130334000" class="mm_tg">T</a>\n' +
+      '                <a href="https://t.me/79913745577" class="mm_tg">T</a>\n' +
       '                <a href="https://wa.me/79913745577" class="mm_wa">W</a>\n' +
       '            </div>\n' +
       '        </div>\n' +

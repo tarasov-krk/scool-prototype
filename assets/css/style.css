@@ -313,6 +313,10 @@
 #mm .mm_block_wrap {
     display: none;
 }
+#mm .mm_open,
+#mm .mm_block a {
+    padding: 10px 5px;
+}
 #mm .mm_block {
     display: flex;
     flex-direction: column-reverse;
