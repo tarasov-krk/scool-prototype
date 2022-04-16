@@ -1,6 +1,7 @@
-function isMobile() {
+function isMobile () {
   return window.innerWidth <= 991
 }
+
 $(document).ready(() => {
   if (isMobile()) {
     $('body').addClass('mobile')
@@ -48,9 +49,16 @@ $(document).ready(() => {
     if (isRemove) {
       $('.people_name_mobile').hide()
     }
-  });
+  })
 
-  function showPeopleInfo() {
+  if (isMobile()) {
+    showSocial()
+  }
+  $('body').on('click', '#mm .mm_open', function () {
+    $('#mm .mm_block_wrap').toggle()
+  })
+
+  function showPeopleInfo () {
     let name = $(this).data('name')
     let img = $(this).data('img')
     let desc = $(this).data('desc')
@@ -87,6 +95,19 @@ $(document).ready(() => {
   $('body').on('click', '#demo-modal .demo-modal-close', () => {
     $('#demo-modal').remove()
   })
+
+  function showSocial () {
+    $('body').append('<div id="mm">\n' +
+      '        <div class="mm_block_wrap">\n' +
+      '            <div class="mm_block">\n' +
+      '                <a href="tel:+79913745577" class="mm_phone">P</a>\n' +
+      '                <a href="https://t.me/79130334000" class="mm_tg">T</a>\n' +
+      '                <a href="https://wa.me/79913745577" class="mm_wa">W</a>\n' +
+      '            </div>\n' +
+      '        </div>\n' +
+      '        <div class="mm_open">M</div>\n' +
+      '    </div>')
+  }
 
   function showDemoModal (text) {
     const demoModal = '<div id="demo-modal" style="opacity: 1;transition: opacity 300ms ease 0s;"\n' +

@@ -302,6 +302,22 @@
     margin-top: 64px;
 }
 
+#mm {
+    position: fixed;
+    width: 20px;
+    bottom: 25px;
+    right: 25px;
+    cursor: pointer;
+    z-index: 50;
+}
+#mm .mm_block_wrap {
+    display: none;
+}
+#mm .mm_block {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 @media screen and (max-width: 991px) {
     .navigation {
         justify-content: end;
