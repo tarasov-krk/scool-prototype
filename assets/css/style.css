@@ -196,6 +196,9 @@
 .p-30 {
     padding: 30px;
 }
+.pt-50 {
+    padding-top: 50px;
+}
 .mt-0 {
     margin-top: 0;
 }
@@ -315,6 +318,9 @@
     }
     #group-photo h1 {
         font-size: 18px;
+    }
+    #album .intro {
+        padding-top: 50px;
     }
     .section {
         padding-top: 8px;

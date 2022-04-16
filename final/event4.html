@@ -213,7 +213,7 @@
            class="button w-button">Добавить фото в этот альбом</a></div>
     </div>
 
-    <div class="section wf-section">
+    <div id="album" class="section wf-section">
         <div class="wrapper">
             <div class="intro">
                 <h2 class="no-margin-bottom">Другие альбомы этого класса</h2>
@@ -336,16 +336,7 @@
 <script src="../assets/js/litegallery/lg-pager.min.js"></script>
 <script src="../assets/js/litegallery/lg-fullscreen.min.js"></script>
 <script src="../assets/js/litegallery/lg-zoom.min.js"></script>
-
-<script>
-  $(document).ready(function () {
-    $('#gallery').lightGallery({
-      showThumbByDefault: false,
-      zoom: window.innerWidth <= 991
-    })
-  })
-</script>
-
+<script src="../assets/js/litegallery/lg-hash.min.js"></script>
 <script src="../assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>
