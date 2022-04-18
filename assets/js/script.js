@@ -100,12 +100,12 @@ $(document).ready(() => {
     $('body').append('<div id="mm">\n' +
       '        <div class="mm_block_wrap">\n' +
       '            <div class="mm_block">\n' +
-      '                <a href="tel:+79913745577" class="mm_phone"><img src="/assets/img/TLF.png"></a>\n' +
-      '                <a href="https://t.me/79913745577" class="mm_tg"><img src="/assets/img/TG.png"></a>\n' +
-      '                <a href="https://wa.me/79913745577" class="mm_wa"><img src="/assets/img/WA.png"></a>\n' +
+      '                <a href="tel:+79913745577" class="mm_phone"><img src="../assets/img/TLF.png"></a>\n' +
+      '                <a href="https://t.me/79913745577" class="mm_tg"><img src="../assets/img/TG.png"></a>\n' +
+      '                <a href="https://wa.me/79913745577" class="mm_wa"><img src="../assets/img/WA.png"></a>\n' +
       '            </div>\n' +
       '        </div>\n' +
-      '        <div class="mm_open"><img src="/assets/img/SV.png"></div>\n' +
+      '        <div class="mm_open"><img src="../assets/img/SV.png"></div>\n' +
       '    </div>')
   }
 
