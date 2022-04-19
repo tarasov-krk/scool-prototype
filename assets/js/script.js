@@ -61,9 +61,10 @@ $(document).ready(() => {
   })
 
     var BASE_RIGHT = 42;
-    var BASE_BOTTOM = 28;
+    var BASE_BOTTOM = 18;
     var BASE_WIDTH = 72;
-    var buttonList = document.querySelector('.social_block');
+    var fixed_block = '.social_block';
+    var buttonList = document.querySelector(fixed_block);
     var timeout;
     var lock = false;
     var buttonsTimer = null;
@@ -90,12 +91,12 @@ $(document).ready(() => {
     viewportHandler({ target: window.visualViewport })
 
     function callbackToggler() {
-      $('.social_block').hide();
+      $(fixed_block).hide();
       if(buttonsTimer !== null) {
         clearTimeout(buttonsTimer);
       }
       buttonsTimer = setTimeout(function() {
-        $('.social_block').fadeIn();
+        $(fixed_block).fadeIn();
       }, 300);
     }
 
