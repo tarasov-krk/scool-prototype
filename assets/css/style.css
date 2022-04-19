@@ -197,6 +197,11 @@
 
 .instagram .instagram-link {
     max-width: 379px;
+
+}
+
+#album .instagram .instagram-link {
+    height: 310px;
 }
 
 .hidden {
@@ -392,6 +397,7 @@
 
     #album .intro {
         padding-top: 50px;
+        margin-bottom: 26px;
     }
 
     .section {
@@ -404,6 +410,7 @@
 
     #album .instagram .instagram-link {
         width: 46%;
+        height: 200px;
     }
 
     #album .hovered-block .hovered-block-plank {
@@ -436,6 +443,7 @@
     #year-block .product-card-wrapper a {
         height: max-content;
     }
+
     #year-block .product-card-wrapper img {
         display: block;
         margin-bottom: 10px;
@@ -454,6 +462,14 @@
     .nav-top .nav-top-social {
         width: 100%;
         justify-content: space-around;
+    }
+
+    #group-photo div.p-30 {
+        padding: 0;
+    }
+
+    #group-photo {
+        margin-top: 25px;
     }
 }
 
@@ -513,10 +529,16 @@
 
     #album .instagram {
         display: block;
+        text-align: center;
+    }
+
+    #album .instagram a {
+        text-align: left;
     }
 
     #album .instagram .instagram-link {
-        width: 100%;
+        width: 85%;
+        margin-bottom: 12px;
     }
 
     #album .hovered-block .hovered-block-plank {
@@ -531,6 +553,7 @@
 
     #album .hovered-block .hovered-block-plank p {
         font-size: 12px;
+        line-height: 1.4;
     }
 
     .gallery > ul > li {
