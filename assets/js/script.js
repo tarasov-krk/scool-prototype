@@ -113,7 +113,7 @@ $(document).ready(() => {
     }
 
     function viewportHandler(event) {
-      if (lock) {
+      if (lock || !isMobile()) {
         return;
       }
       var scale = window.visualViewport.scale;
