@@ -433,6 +433,9 @@
         display: none;
     }
 
+    #year-block .product-card-wrapper a {
+        height: max-content;
+    }
     #year-block .product-card-wrapper img {
         display: block;
         margin-bottom: 10px;
