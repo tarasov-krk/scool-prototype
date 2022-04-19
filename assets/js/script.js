@@ -66,6 +66,7 @@ $(document).ready(() => {
     var buttonList = document.querySelector('.social_block');
     var timeout;
     var lock = false;
+    var buttonsTimer = null;
     var windowWidth = $(window).width();
     var offsetTop = window.visualViewport.offsetTop;
     var offsetLeft = window.visualViewport.offsetLeft;
@@ -74,6 +75,7 @@ $(document).ready(() => {
       if (window.visualViewport.width != windowWidth) {
         windowWidth = window.visualViewport.width;
         delayViewportHandler();
+        callbackToggler();
       }
     });
     window.visualViewport.addEventListener("scroll", function(event) {
@@ -81,10 +83,21 @@ $(document).ready(() => {
         offsetTop = window.visualViewport.offsetTop;
         offsetLeft = window.visualViewport.offsetLeft
         viewportHandler(event);
+        callbackToggler();
       }
     });
 
     viewportHandler({ target: window.visualViewport })
+
+    function callbackToggler() {
+      $('.social_block').hide();
+      if(buttonsTimer !== null) {
+        clearTimeout(buttonsTimer);
+      }
+      buttonsTimer = setTimeout(function() {
+        $('.social_block').fadeIn();
+      }, 300);
+    }
 
     function delayViewportHandler() {
       if (timeout) {
