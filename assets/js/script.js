@@ -121,7 +121,7 @@ $(document).ready(() => {
 
       if (window.outerWidth < 768) {
         scale = scale * 1.35;
-        rightDivider = 0.95
+        rightDivider = 0.97
       }
 
       var moveRight = (BASE_RIGHT / scale + $(window).width() - event.target.width/rightDivider) - event.target.pageLeft;
