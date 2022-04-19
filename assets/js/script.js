@@ -55,8 +55,84 @@ $(document).ready(() => {
     showSocial()
   }
   $('body').on('click', '#mm .mm_open', function () {
+    $('#mm .mm_open img:first-child').toggle()
+    $('#mm .mm_open img:last-child').toggle()
     $('#mm .mm_block_wrap').toggle()
   })
+
+    var BASE_RIGHT = 42;
+    var BASE_BOTTOM = 28;
+    var BASE_WIDTH = 72;
+    var BASE_HEIGHT = 72;
+    var BASE_MARGIN_TOP = 14;
+    var buttonList = document.querySelector('.social_block');
+    var timeout;
+    var lock = false;
+    var buttonsTimer = null;
+    var windowWidth = $(window).width();
+    var offsetTop = window.visualViewport.offsetTop;
+    var offsetLeft = window.visualViewport.offsetLeft;
+
+    window.visualViewport.addEventListener("resize", function() {
+      if (window.visualViewport.width != windowWidth) {
+        windowWidth = window.visualViewport.width;
+        delayViewportHandler();
+        callbackToggler();
+      }
+    });
+    window.visualViewport.addEventListener("scroll", function(event) {
+      if (window.visualViewport.offsetTop != offsetTop || offsetLeft != window.visualViewport.offsetLeft) {
+        offsetTop = window.visualViewport.offsetTop;
+        offsetLeft = window.visualViewport.offsetLeft
+        viewportHandler(event);
+        callbackToggler();
+      }
+    });
+
+    viewportHandler({ target: window.visualViewport })
+
+    function callbackToggler() {
+      $('.wbox-callback-button-list').css({
+        "display": "none"
+      });
+      if(buttonsTimer !== null) {
+        clearTimeout(buttonsTimer);
+      }
+      buttonsTimer = setTimeout(function() {
+        $('.wbox-callback-button-list').fadeIn();
+      }, 700);
+    }
+
+    function delayViewportHandler() {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      lock = true;
+      timeout = setTimeout(function() {
+        lock = false;
+        viewportHandler({ target: window.visualViewport })
+      }, 100);
+    }
+
+    function viewportHandler(event) {
+      if (lock) {
+        return;
+      }
+      var scale = window.visualViewport.scale;
+      var rightDivider = 1;
+
+      if (window.outerWidth < 768) {
+        scale = scale * 1.35;
+        rightDivider = 0.95
+      }
+
+      var moveRight = (BASE_RIGHT / scale + $(window).width() - event.target.width/rightDivider) - event.target.pageLeft;
+      var moveBottom = (BASE_BOTTOM / scale + $(window).height() - event.target.height) - event.target.pageTop;
+      buttonList.style.width = (BASE_WIDTH / scale) + 'px';
+      buttonList.style.right = moveRight + 'px';
+      buttonList.style.bottom = Math.max(moveBottom, BASE_BOTTOM) + 'px';
+    }
 
   function showPeopleInfo () {
     let name = $(this).data('name')
@@ -97,7 +173,7 @@ $(document).ready(() => {
   })
 
   function showSocial () {
-    $('body').append('<div id="mm">\n' +
+    $('body').append('<div id="mm" class="social_block">\n' +
       '        <div class="mm_block_wrap">\n' +
       '            <div class="mm_block">\n' +
       '                <a href="tel:+79913745577" class="mm_phone"><img src="../assets/img/TLF.png"></a>\n' +
@@ -105,7 +181,7 @@ $(document).ready(() => {
       '                <a href="https://wa.me/79913745577" class="mm_wa"><img src="../assets/img/WA.png"></a>\n' +
       '            </div>\n' +
       '        </div>\n' +
-      '        <div class="mm_open"><img src="../assets/img/SV.png"></div>\n' +
+      '        <div class="mm_open"><img src="../assets/img/SV-1.png"><img src="../assets/img/SV.png"></div>\n' +
       '    </div>')
   }
 
