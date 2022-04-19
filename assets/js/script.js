@@ -63,12 +63,9 @@ $(document).ready(() => {
     var BASE_RIGHT = 42;
     var BASE_BOTTOM = 28;
     var BASE_WIDTH = 72;
-    var BASE_HEIGHT = 72;
-    var BASE_MARGIN_TOP = 14;
     var buttonList = document.querySelector('.social_block');
     var timeout;
     var lock = false;
-    var buttonsTimer = null;
     var windowWidth = $(window).width();
     var offsetTop = window.visualViewport.offsetTop;
     var offsetLeft = window.visualViewport.offsetLeft;
@@ -77,7 +74,6 @@ $(document).ready(() => {
       if (window.visualViewport.width != windowWidth) {
         windowWidth = window.visualViewport.width;
         delayViewportHandler();
-        callbackToggler();
       }
     });
     window.visualViewport.addEventListener("scroll", function(event) {
@@ -85,23 +81,10 @@ $(document).ready(() => {
         offsetTop = window.visualViewport.offsetTop;
         offsetLeft = window.visualViewport.offsetLeft
         viewportHandler(event);
-        callbackToggler();
       }
     });
 
     viewportHandler({ target: window.visualViewport })
-
-    function callbackToggler() {
-      $('.wbox-callback-button-list').css({
-        "display": "none"
-      });
-      if(buttonsTimer !== null) {
-        clearTimeout(buttonsTimer);
-      }
-      buttonsTimer = setTimeout(function() {
-        $('.wbox-callback-button-list').fadeIn();
-      }, 700);
-    }
 
     function delayViewportHandler() {
       if (timeout) {
