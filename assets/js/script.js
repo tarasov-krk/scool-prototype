@@ -9,7 +9,6 @@ $(document).ready(() => {
 
   $('#gallery').lightGallery({
     showThumbByDefault: false,
-    zoom: isMobile(),
     hash: isMobile(),
   })
 
