@@ -472,6 +472,12 @@
         margin-top: 25px;
     }
 }
+@media screen and (max-width: 570px) {
+    .gallery > ul > li {
+        width: 140px;
+        height: 95px;
+    }
+}
 
 @media screen and (max-width: 479px) {
     #demo-modal {
@@ -564,7 +570,7 @@
 
 @media screen and (max-width: 371px) {
     .gallery > ul > li {
-        width: 260px;
-        height: 175px;
+        width: 100px;
+        height: 80px;
     }
 }
