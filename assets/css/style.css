@@ -573,4 +573,7 @@
         width: 100px;
         height: 80px;
     }
+    .nav-main .brand {
+        font-size: 18px;
+    }
 }
