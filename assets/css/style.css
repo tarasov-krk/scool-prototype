@@ -446,7 +446,7 @@
     #year-block .product-card-image-wrapper {
         background-size: 0;
         height: auto;
-        position: initial;
+        position: inherit;
     }
 
     #year-block .product-card-wrapper img {
