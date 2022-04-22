@@ -430,6 +430,9 @@
     .gallery > ul > li {
         width: 180px;
         height: 140px;
+        padding: 0 7px;
+        margin-right: 0;
+        margin-bottom: 14px;
     }
 
     .gallery > ul > li a {
@@ -484,8 +487,8 @@
 
     .gallery > ul > li {
         float: none;
-        width: 160px;
-        height: 109px;
+        width: 170px;
+        height: 110px;
     }
 
     #gallery {
@@ -580,12 +583,8 @@
     }
 
     .gallery > ul > li {
-        width: 145px;
-        height: 100px;
-    }
-
-    .gallery > ul > li:nth-child(even) {
-        margin-right: 0;
+        width: 150px;
+        height: 90px;
     }
 }
 
