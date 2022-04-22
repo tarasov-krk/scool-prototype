@@ -440,13 +440,17 @@
         display: none;
     }
 
+    #year-block .product-card-image-wrapper .hovered-block-plank {
+        display: none;
+    }
     #year-block .product-card-image-wrapper {
         background-size: 0;
-        height: 56vw;
+        height: auto;
+        position: initial;
     }
 
     #year-block .product-card-wrapper img {
-        display: block;
+        display: inline-block;
         margin-bottom: 10px;
     }
 }
