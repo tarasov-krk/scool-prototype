@@ -432,6 +432,10 @@
         height: 140px;
     }
 
+    .gallery > ul > li a {
+        border: 0;
+    }
+
     .lg-actions {
         display: none;
     }
@@ -575,8 +579,12 @@
     }
 
     .gallery > ul > li {
-        width: 135px;
+        width: 145px;
         height: 100px;
+    }
+
+    .gallery > ul > li:nth-child(even) {
+        margin-right: 0;
     }
 }
 
@@ -587,10 +595,10 @@
     }
 }
 
-@media screen and (max-width: 371px) {
+@media screen and (max-width: 340px) {
     .gallery > ul > li {
-        width: 120px;
-        height: 80px;
+        width: 134px;
+        height: 89px;
     }
 
     .nav-main .brand {
