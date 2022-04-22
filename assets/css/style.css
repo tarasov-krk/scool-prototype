@@ -16,6 +16,11 @@
 
 .product-card-wrapper {
     width: 50%;
+    height: min-content;
+}
+
+.w-commerce-commercecartcontainer {
+    height: min-content;
 }
 
 .product-card-image-wrapper {
