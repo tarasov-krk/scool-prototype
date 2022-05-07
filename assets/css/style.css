@@ -229,6 +229,10 @@
     margin-top: 0;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
 .lg-backdrop {
     background-color: #fff;
 }
@@ -376,6 +380,15 @@
 
 #year-block .product-card-wrapper img {
     display: none;
+}
+
+.price-img-1,
+.price-img-2 {
+    width: 37%;
+}
+
+.price-img-3 {
+    width: 48%;
 }
 
 @media screen and (max-width: 991px) {
@@ -590,6 +603,15 @@
     .gallery > ul > li {
         width: 150px;
         height: 90px;
+    }
+
+    .price-img-1,
+    .price-img-2 {
+        width: 100%;
+    }
+
+    .price-img-3 {
+        width: 100%;
     }
 }
 

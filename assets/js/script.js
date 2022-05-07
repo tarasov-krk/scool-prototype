@@ -7,10 +7,12 @@ $(document).ready(() => {
     $('body').addClass('mobile')
   }
 
-  $('#gallery').lightGallery({
-    showThumbByDefault: false,
-    hash: isMobile(),
-  })
+  if ($.fn.lightGallery) {
+    $('#gallery').lightGallery({
+      showThumbByDefault: false,
+      hash: isMobile(),
+    })
+  }
 
   $('.window_popup-close').click(function () {
     $(this).closest('.window_popup').hide()
