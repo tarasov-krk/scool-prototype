@@ -52,6 +52,14 @@ $(document).ready(() => {
     }
   })
 
+  $('.price-img-3__description').click(()=>{
+    showDemoModal(
+      '<h5>ИЗГОТОВЛЕНИЕ ТРЁХСЛОЙНОГО ФОТО ФОРМАТА А4</h5>',
+      '<img src="./assets/img/price/ff5e3687fc4ae510804a07d68659b6b9.png">' +
+      '<p>Такое фото - более плотное, чем обычное. Его поверхность лучше защищена от внешних воздействий: УФ-лучей, нечаянно пролитой жидкости и т.д.</p>'
+    )
+  })
+
   if (isMobile()) {
     showSocial()
   }
@@ -183,12 +191,12 @@ $(document).ready(() => {
       '    </div>')
   }
 
-  function showDemoModal (text) {
+  function showDemoModal (title, body) {
     const demoModal = '<div id="demo-modal" style="opacity: 1;transition: opacity 300ms ease 0s;"\n' +
       '         class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">\n' +
       '        <div class="w-commerce-commercecartcontainer cart-container" style="transform: none;">\n' +
       '            <div class="w-commerce-commercecartheader cart-header">\n' +
-      '                <h5 class="w-commerce-commercecartheading">\n' + text + '</h5>\n' +
+      '                <h5 class="w-commerce-commercecartheading">\n' + title + '</h5>\n' +
       '                <a href="#"\n' +
       '                   class="demo-modal-close w-commerce-commercecartcloselink w-inline-block">\n' +
       '                    <svg width="16px" height="16px" viewBox="0 0 16 16">\n' +
@@ -201,6 +209,7 @@ $(document).ready(() => {
       '                    </svg>\n' +
       '                </a>\n' +
       '            </div>\n' +
+      '           <div class="w-commerce-commercecartformwrapper"><div class="w-commerce-commercecartfooter cart-footer">'+body+'</div></div>\n' +
       '        </div>\n' +
       '    </div>'
 
