@@ -391,6 +391,21 @@
     width: 48%;
 }
 
+.price-img-3__wrap {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.price-img-3__description {
+    cursor: help;
+    position: absolute;
+    left: 38%;
+    top: 0;
+    width: 30%;
+    height: 52%;
+}
+
 @media screen and (max-width: 991px) {
     .navigation {
         justify-content: end;
