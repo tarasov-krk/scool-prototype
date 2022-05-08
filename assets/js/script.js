@@ -52,11 +52,11 @@ $(document).ready(() => {
     }
   })
 
-  $('.price-img-3__description').click(()=>{
+  $('.price-img-3__description').click(() => {
     showDemoModal(
       '<h5>ИЗГОТОВЛЕНИЕ ТРЁХСЛОЙНОГО ФОТО ФОРМАТА А4</h5>',
       '<img src="./assets/img/price/ff5e3687fc4ae510804a07d68659b6b9.png">' +
-      '<p>Такое фото - более плотное, чем обычное. Его поверхность лучше защищена от внешних воздействий: УФ-лучей, нечаянно пролитой жидкости и т.д.</p>'
+      '<p>Такое фото - более плотное, чем обычное. Его поверхность лучше защищена от внешних воздействий: УФ-лучей, нечаянно пролитой жидкости и т.д.</p>',
     )
   })
 
@@ -69,76 +69,77 @@ $(document).ready(() => {
     $('#mm .mm_block_wrap').toggle()
   })
 
-    var BASE_RIGHT = 42;
-    var BASE_BOTTOM = 18;
-    var BASE_WIDTH = 72;
-    var fixed_block = '.social_block';
-    var buttonList = document.querySelector(fixed_block);
-    var timeout;
-    var lock = false;
-    var buttonsTimer = null;
-    var windowWidth = $(window).width();
-    var offsetTop = window.visualViewport.offsetTop;
-    var offsetLeft = window.visualViewport.offsetLeft;
+  var BASE_RIGHT = 42
+  var BASE_BOTTOM = 18
+  var BASE_WIDTH = 72
+  var fixed_block = '.social_block'
+  var buttonList = document.querySelector(fixed_block)
+  var timeout
+  var lock = false
+  var buttonsTimer = null
+  var windowWidth = $(window).width()
+  var offsetTop = window.visualViewport.offsetTop
+  var offsetLeft = window.visualViewport.offsetLeft
 
-    window.visualViewport.addEventListener("resize", function() {
-      if (window.visualViewport.width != windowWidth) {
-        windowWidth = window.visualViewport.width;
-        delayViewportHandler();
-        callbackToggler();
-      }
-    });
-    window.visualViewport.addEventListener("scroll", function(event) {
-      if (window.visualViewport.offsetTop != offsetTop || offsetLeft != window.visualViewport.offsetLeft) {
-        offsetTop = window.visualViewport.offsetTop;
-        offsetLeft = window.visualViewport.offsetLeft
-        viewportHandler(event);
-        callbackToggler();
-      }
-    });
+  window.visualViewport.addEventListener('resize', function () {
+    if (window.visualViewport.width != windowWidth) {
+      windowWidth = window.visualViewport.width
+      delayViewportHandler()
+      callbackToggler()
+    }
+  })
+  window.visualViewport.addEventListener('scroll', function (event) {
+    if (window.visualViewport.offsetTop != offsetTop || offsetLeft != window.visualViewport.offsetLeft) {
+      offsetTop = window.visualViewport.offsetTop
+      offsetLeft = window.visualViewport.offsetLeft
+      viewportHandler(event)
+      callbackToggler()
+    }
+  })
 
-    viewportHandler({ target: window.visualViewport })
+  viewportHandler({ target: window.visualViewport })
 
-    function callbackToggler() {
-      $(fixed_block).hide();
-      if(buttonsTimer !== null) {
-        clearTimeout(buttonsTimer);
-      }
-      buttonsTimer = setTimeout(function() {
-        $(fixed_block).fadeIn();
-      }, 300);
+  function callbackToggler () {
+    $(fixed_block).hide()
+    if (buttonsTimer !== null) {
+      clearTimeout(buttonsTimer)
+    }
+    buttonsTimer = setTimeout(function () {
+      $(fixed_block).fadeIn()
+    }, 300)
+  }
+
+  function delayViewportHandler () {
+    if (timeout) {
+      clearTimeout(timeout)
+      timeout = null
+    }
+    lock = true
+    timeout = setTimeout(function () {
+      lock = false
+      viewportHandler({ target: window.visualViewport })
+    }, 100)
+  }
+
+  function viewportHandler (event) {
+    if (lock || !isMobile()) {
+      return
+    }
+    var scale = window.visualViewport.scale
+    var rightDivider = 1
+
+    if (window.outerWidth < 768) {
+      scale = scale * 1.35
+      rightDivider = 0.97
     }
 
-    function delayViewportHandler() {
-      if (timeout) {
-        clearTimeout(timeout);
-        timeout = null;
-      }
-      lock = true;
-      timeout = setTimeout(function() {
-        lock = false;
-        viewportHandler({ target: window.visualViewport })
-      }, 100);
-    }
-
-    function viewportHandler(event) {
-      if (lock || !isMobile()) {
-        return;
-      }
-      var scale = window.visualViewport.scale;
-      var rightDivider = 1;
-
-      if (window.outerWidth < 768) {
-        scale = scale * 1.35;
-        rightDivider = 0.97
-      }
-
-      var moveRight = (BASE_RIGHT / scale + $(window).width() - event.target.width/rightDivider) - event.target.pageLeft;
-      var moveBottom = (BASE_BOTTOM / scale + $(window).height() - event.target.height) - event.target.pageTop;
-      buttonList.style.width = (BASE_WIDTH / scale) + 'px';
-      buttonList.style.right = moveRight + 'px';
-      buttonList.style.bottom = Math.max(moveBottom, BASE_BOTTOM) + 'px';
-    }
+    var moveRight = (BASE_RIGHT / scale + $(window).width() - event.target.width / rightDivider) -
+      event.target.pageLeft
+    var moveBottom = (BASE_BOTTOM / scale + $(window).height() - event.target.height) - event.target.pageTop
+    buttonList.style.width = (BASE_WIDTH / scale) + 'px'
+    buttonList.style.right = moveRight + 'px'
+    buttonList.style.bottom = Math.max(moveBottom, BASE_BOTTOM) + 'px'
+  }
 
   function showPeopleInfo () {
     let name = $(this).data('name')
@@ -192,7 +193,7 @@ $(document).ready(() => {
   }
 
   function showDemoModal (title, body) {
-    const demoModal = '<div id="demo-modal" style="opacity: 1;transition: opacity 300ms ease 0s;"\n' +
+    let demoModal = '<div id="demo-modal" style="opacity: 1;transition: opacity 300ms ease 0s;"\n' +
       '         class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">\n' +
       '        <div class="w-commerce-commercecartcontainer cart-container" style="transform: none;">\n' +
       '            <div class="w-commerce-commercecartheader cart-header">\n' +
@@ -208,9 +209,12 @@ $(document).ready(() => {
       '                        </g>\n' +
       '                    </svg>\n' +
       '                </a>\n' +
-      '            </div>\n' +
-      '           <div class="w-commerce-commercecartformwrapper"><div class="w-commerce-commercecartfooter cart-footer">'+body+'</div></div>\n' +
-      '        </div>\n' +
+      '            </div>\n'
+    if (body) {
+      demoModal += '<div class="w-commerce-commercecartformwrapper"><div class="w-commerce-commercecartfooter cart-footer">' +
+        body + '</div></div>\n'
+    }
+    demoModal += '        </div>\n' +
       '    </div>'
 
     $('body').append(demoModal)
